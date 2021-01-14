@@ -1,0 +1,18 @@
+.margin_16 {
+  margin-top: 1rem;
+}
+
+.padding_left_7 {
+  padding-left: 7px;
+}
+
+.article {
+  margin-bottom: 10px;
+}
+
+.menu-header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #999;
+  text-align: right;
+}

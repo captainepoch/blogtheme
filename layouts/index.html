@@ -1,0 +1,18 @@
+{{- define "main" -}}
+
+{{- if .Site.Menus.header -}}
+<div class="menu-header">
+	{{ range .Site.Menus.header }}
+	<a href="{{ .URL | relLangURL }}">{{- .Name -}}</a>
+	{{ end }}
+</div>
+{{- end -}}
+
+{{- range (where .Site.RegularPages "Type" "in" site.Params.mainSections) -}}
+<div class="article">
+	<span class="date">{{ .Date.Format "2006-01-02" }}</span>
+	<a href="{{ .RelPermalink }}">{{- .Title -}}</a>
+</div>
+{{- end -}}
+
+{{- end -}}

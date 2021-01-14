@@ -1,0 +1,17 @@
+{{- block "footer" . -}}
+<footer>
+	{{- if .Site.Menus.footer -}}
+	<div>
+		{{ range .Site.Menus.footer }}
+		<a href="{{ .URL | relLangURL }}">{{- .Name -}}</a>
+		{{ end }}
+	</div>
+	{{- end -}}
+
+    {{- if .Site.Copyright -}}
+    <div class="copyright">
+        {{- .Site.Copyright -}}
+    </div>
+	{{- end -}}
+</footer>
+{{- end -}}

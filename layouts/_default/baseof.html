@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+{{ if .IsHome }}
+	{{ partial "header.html" . }}
+{{ end }}
+<main>
+  <article>
+    {{ block "main" . }}{{ end }}
+  </article>
+</main>
+{{- partial "footer.html" . -}}
+</body>
+</html>

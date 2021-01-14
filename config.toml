@@ -1,0 +1,102 @@
+# Basic configuration
+baseurl = "https://domain.tld"
+title = "TITLE"
+languageCode = "en"
+defaultContentLanguage = "en-us"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+# Theme to use
+theme = "blogtheme"
+
+# Copyright
+copyright = "© 2014-present. Author Surname. All rights reserved."
+
+# Blog params
+[params]
+  referrer = "always"
+  dateFmt  = "January 2, 2006"
+  author = "Author Surname"
+  description = """
+  Long descrption
+  """
+  keywords = "key1, key2, key3"
+  favicon = "/img/favicon.ico"
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+
+# Links format
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+  page = "/:slug"
+
+# Menu
+[menu]
+  [[menu.header]]
+    url = "https://git.sr.ht/"
+	name = "Git"
+	weight = 1
+  [[menu.header]]
+    url = "/misc"
+	name = "Misc"
+	weight = 2
+  [[menu.header]]
+    url = "/contact"
+	name = "Contact"
+	weight = 3
+  [[menu.header]]
+    url = "/index.xml"
+    name = "RSS"
+    weight = 4
+
+  [[menu.footer]]
+    url = "/license"
+    name = "License"
+    weight = 1
+  [[menu.footer]]
+    url = "/privacy-policy"
+    name = "Privacy Policy"
+    weight = 2
+
+# Output formats
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "index"
+
+# Setup goldmark
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+	[markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+	lineNumbersInTable = true
+    noClasses = true
+    style = "friendly"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
