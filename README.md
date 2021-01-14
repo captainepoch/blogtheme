@@ -10,6 +10,6 @@ There is a [`config.toml`][config] example file in the root of the project.
 [MIT][license].
 
   [blog]: https://adol.pw
-  [config]: https://github.com/captainepoch/blogtheme/tree/master/config.toml
-  [license]: https://github.com/captainepoch/blogtheme/tree/master/COPYING
+  [config]: ./config.toml
+  [license]: ./COPYING
   [simple-style]: https://github.com/captainepoch/simple-style
