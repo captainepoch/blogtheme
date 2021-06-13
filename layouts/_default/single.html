@@ -26,4 +26,9 @@
 <div class="content">
   {{- .Content -}}
 </div>
+
+{{- if .Params.showComments -}}
+{{- partial "comment.html" . -}}
+{{- end -}}
+
 {{- end -}}

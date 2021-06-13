@@ -6,6 +6,7 @@
 		<meta name="description" content="{{ .Description }}">
 	{{ end }}
 	<title>{{ if .IsHome }}{{ .Site.Title }}{{else}}{{ .Title }}{{ end }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ "css/normalize.css" | relURL }}">
 	<link rel="stylesheet" type="text/css" href="{{ "css/main.css" | relURL }}">
 	<link rel="stylesheet" type="text/css" href="{{ "css/custom.css" | relURL }}">
 	<link rel="icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon" />

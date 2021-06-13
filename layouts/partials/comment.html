@@ -1,0 +1,12 @@
+{{- block "comment" . -}}
+<div class="blog_comment">
+Any questions or comments? Please use my <a
+href="{{ .Site.Params.srht_public_inbox }}"target="_blank">public
+inbox</a> by sending a plain-text email to <a
+href="mailto:{{ .Site.Params.srht_mail | safeURL }}{{ if
+.Site.Params.srht_subject }}?subject=Re: {{ .Title |
+safeURL }}{{ end }}">{{ .Site.Params.srht_mail }}</a> [<a
+href="https://man.sr.ht/lists.sr.ht/etiquette.md"target="_blank">mailist
+etiquette</a>].
+</div>
+{{- end -}}

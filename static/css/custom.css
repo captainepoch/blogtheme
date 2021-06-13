@@ -10,9 +10,14 @@
   margin-bottom: 10px;
 }
 
-.menu-header {
+.menu_header {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #999;
   text-align: right;
+}
+
+.blog_comment {
+	color: rgb(131, 131, 131);
+	margin: 10px;
 }

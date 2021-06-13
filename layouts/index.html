@@ -1,7 +1,7 @@
 {{- define "main" -}}
 
 {{- if .Site.Menus.header -}}
-<div class="menu-header">
+<div class="menu_header">
 	{{ range .Site.Menus.header }}
 	<a href="{{ .URL | relLangURL }}">{{- .Name -}}</a>
 	{{ end }}
