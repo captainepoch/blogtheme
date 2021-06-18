@@ -1,13 +1,13 @@
 {{- define "main" -}}
 
 <div>
-  <h1>{{ .Title }}</h1>
+	<h1>{{ .Title }}</h1>
 </div>
 {{- range .Paginator.Pages -}}
-  <div class="article">
+<div class="article">
 	<span class="date">{{ .Date.Format "2006-01-02" }}</span>
 	<a href="{{ .RelPermalink }}">{{- .Title -}}</a>
-  </div>
+</div>
 {{- end -}}
 
 {{- end -}}

@@ -1,14 +1,13 @@
 {{- define "main" -}}
+
 <div>
-  <h1>{{ .Title }}</h1>
+	<h1>{{ .Title }}</h1>
 </div>
-<div>
-  {{- .Content -}}
+{{- range .Paginator.Pages -}}
+<div class="article">
+	<span class="date">{{ .Date.Format "2006-01-02" }}</span>
+	<a href="{{ .RelPermalink }}">{{- .Title -}}</a>
 </div>
-<ul>
-  {{- range .Paginator.Pages -}}
-  <li>{{ with .Date }}{{ .Format "2006-01-02 15:04" }} - {{ end }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}: {{ . }}{{ end }}</li>
-  {{- end -}}
-</ul>
-</main>
+{{- end -}}
+
 {{- end -}}
