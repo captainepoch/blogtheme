@@ -41,16 +41,16 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
 [menu]
   [[menu.header]]
     url = "https://git.sr.ht/"
-	name = "Git"
-	weight = 1
+    name = "Git"
+    weight = 1
   [[menu.header]]
     url = "/misc"
-	name = "Misc"
-	weight = 2
+    name = "Misc"
+    weight = 2
   [[menu.header]]
     url = "/contact"
-	name = "Contact"
-	weight = 3
+    name = "Contact"
+    weight = 3
   [[menu.header]]
     url = "/index.xml"
     name = "RSS"
@@ -87,7 +87,7 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
       attribute = true
       autoHeadingID = true
       autoHeadingIDType = "github"
-	[markup.goldmark.renderer]
+  [markup.goldmark.renderer]
       hardWraps = false
       unsafe = false
       xhtml = false
@@ -97,7 +97,7 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
-	lineNumbersInTable = true
+  lineNumbersInTable = true
     noClasses = true
     style = "friendly"
     tabWidth = 4
