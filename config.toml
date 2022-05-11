@@ -28,6 +28,9 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
   srht_mail = "~USER/PUBLIC_INBOX@lists.sr.ht"
   srht_subject = true
 
+  # Custom RSS path (same as <outputFormats.RSS>.xml)
+  rss_path = "/index.xml"
+
 # Taxonomies
 [taxonomies]
   category = "categories"
