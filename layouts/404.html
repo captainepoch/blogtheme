@@ -1,8 +1,11 @@
-{{ define "main" }}
-<article>
+{{- define "main" -}}
+
+<div class="article">
 	<h1>404 - Ain't no duck here, mate!</h1>
+
 	<div>
-		 <a href="{{ "/" | relURL }}">Go back!</a>
+		 <a href="{{ "/" | relURL }}">Go to the index page</a>
 	</div>
-</article>
+</div>
+
 {{ end }}
