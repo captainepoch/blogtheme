@@ -1,0 +1,39 @@
+{{- define "main" -}}
+
+<div class="title margin_16">
+  <h1>{{ .Title }}</h1>
+</div>
+<div class="meta">
+  {{- if .Date -}}
+		<span>
+		<time>
+			{{ .Date.Format ( .Site.Params.dateFmt) }}
+		</time>
+		</span>
+  {{- end -}}
+
+	<span>
+	on <a href="{{ "/" | relURL }}">{{- .Site.Title -}}</a>
+	</span>
+
+  {{- if .Params.showCategories -}}
+		{{- if .Params.categories -}}
+			<span class="padding_left_7">Categories:</span>
+			<span>
+			{{ range .Params.categories -}}
+				<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+			{{ end -}}
+			</span>
+		{{- end -}}
+  {{- end -}}
+</div>
+
+<div class="content">
+  {{- .Content -}}
+</div>
+
+{{- if .Params.showComments -}}
+	{{- partial "comment.html" . -}}
+{{- end -}}
+
+{{- end -}}
