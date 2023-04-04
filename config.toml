@@ -23,12 +23,6 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
   keywords = "key1, key2, key3"
   favicon = "/img/favicon.ico"
 
-  # SourceHut mailbox comment
-  srht_public_inbox = "https://lists.sr.ht/~USER/PUBLIC_INBOX"
-  srht_mail = "~USER/PUBLIC_INBOX@lists.sr.ht"
-  srht_subject = true
-  srht_open_links_blank = false
-
   # Custom RSS path (same as <outputFormats.RSS>.xml)
   rss_path = "/index.xml"
 
