@@ -7,20 +7,13 @@ You can look at the theme at [adol.pw][adolpw].
 
 # Documentation
 
-You can check the documentation of this theme at [blogtheme-man][manpages].
-
-# Contributing (patches, bugs...)
-
-Send an email to the [mailing list][mailist].
+You can check the documentation of this theme at the [wiki][wiki].
 
 # License
 
 [MIT][license].
 
 [adolpw]: https://adol.pw
-[config]: https://git.sr.ht/~captainepoch/blogtheme/tree/master/config.toml
-[license]: https://git.sr.ht/~captainepoch/blogtheme/tree/master/COPYING
-[mailist]: https://lists.sr.ht/~captainepoch/misc
-[manpages]: https://man.sr.ht/~captainepoch/blogtheme-man/
-[simple-style]: https://git.sr.ht/~captainepoch/simple-style
-[srht_lists]: https://lists.sr.ht/
+[license]: ./COPYING
+[simple-style]: https://github.com/captainepoch/simple-style
+[wiki]: https://github.com/captainepoch/blogtheme/wiki
