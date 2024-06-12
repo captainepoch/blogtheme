@@ -26,6 +26,9 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
   # Custom RSS path (same as <outputFormats.RSS>.xml)
   rss_path = "/index.xml"
 
+  bomb_ai = true
+  bomb_ai_page = "https://getfucked.ai"
+
 # Taxonomies
 [taxonomies]
   category = "categories"
@@ -38,7 +41,7 @@ copyright = "© 2014-present. Author Surname. All rights reserved."
 # Menu
 [menu]
   [[menu.header]]
-    url = "https://git.sr.ht/"
+    url = "https://github.com/placeholder"
     name = "Git"
     weight = 1
   [[menu.header]]

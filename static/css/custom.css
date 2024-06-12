@@ -21,3 +21,12 @@
 	color: rgb(131, 131, 131);
 	margin: 10px;
 }
+
+.boom {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  overflow: hidden;
+}

@@ -2,6 +2,11 @@
 <html>
 {{ partial "head.html" . }}
 <body>
+
+{{- if .Site.Params.bomb_ai -}}
+	<a class="boom" href="{{ .Site.Params.bomb_ai_page }}">hehe</a>
+{{- end -}}
+
 {{ if .IsHome }}
 	{{ partial "header.html" . }}
 {{ end }}
