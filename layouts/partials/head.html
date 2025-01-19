@@ -6,9 +6,15 @@
 		<meta name="description" content="{{ .Description }}">
 	{{ end }}
 	<title>{{ if .IsHome }}{{ .Site.Title }}{{else}}{{ .Title }}{{ end }}</title>
-	<link rel="stylesheet" type="text/css" href="{{ "css/normalize.css" | relURL }}">
-	<link rel="stylesheet" type="text/css" href="{{ "css/main.css" | relURL }}">
-	<link rel="stylesheet" type="text/css" href="{{ "css/custom.css" | relURL }}">
+
+	{{ $opts := dict
+		"transpiler" "libsass"
+		"targetPath" "css/style.css"
+	}}
+	{{ with resources.Get "scss/_style.scss" | toCSS $opts | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+	{{ end }}
+
 	<link rel="icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon">
 	<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Params.rss_path }}">
 	{{- if .Site.Params.bomb_ai -}}

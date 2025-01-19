@@ -1,0 +1,167 @@
+body {
+	margin: 16px auto;
+	max-width: 720px;
+	padding: 0 10px;
+	color: #333;
+	line-height: 1.6;
+	font-family: "Liberation Sans", "DejaVu Sans", sans-serif;
+	font-size: 16px;
+  }
+  h1 {
+	font-size: 160%;
+  }
+  h2 {
+	font-size: 120%;
+  }
+  h3 {
+	font-size: 115%;
+  }
+  h4 {
+	font-size: 110%;
+  }
+  h5 {
+	font-size: 105%;
+  }
+  h6 {
+	font-size: 100%;
+  }
+  header {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+  }
+  footer {
+	margin: 0;
+	padding: 5px 0;
+	line-height: 1;
+	border-top: 1px solid #999;
+	text-align: center;
+  }
+  p,
+  div,
+  ul,
+  ol {
+	margin: 10px 0;
+  }
+  img {
+	margin: 10px auto;
+	width: auto;
+	height: auto;
+	display: block;
+  }
+  hr {
+	border: none;
+	border-top: 1px dashed #999;
+	color: #fff;
+	background-color: #fff;
+	height: 1px;
+  }
+  a {
+	color: #0066cc;
+	word-wrap: break-word;
+  }
+  a:visited {
+	color: #0066cc;
+  }
+  nav {
+	padding: 10px 0;
+	text-align: right;
+  }
+  nav a {
+	padding-left: 15px;
+  }
+  table {
+	border-collapse: collapse;
+	font-size: 0.8em;
+	margin: 10px auto;
+  }
+  th,
+  td {
+	border: 1px solid gray;
+	padding: 2px 5px;
+  }
+  code {
+	border: 1px dotted #999;
+	background-color: #f0f0f0;
+	padding: 1px 2px;
+	line-height: 200%;
+	word-wrap: inherit;
+	font-family: "Liberation Mono", "DejaVu Sans Mono", monospace;
+  }
+  pre {
+	border: 1px solid #999;
+	background-color: #f0f0f0;
+	padding: 5px;
+	overflow: auto;
+  }
+  pre code {
+	border: 0;
+	background: none;
+	padding: 0;
+	font-size: 0.8em;
+  }
+  blockquote {
+	margin: 0;
+	padding: 0 0 0 20px;
+	border-left: solid 5px #ccc;
+	font-size: 0.8em;
+  }
+  ul.pagination {
+	list-style-type: none;
+	text-align: center;
+  }
+  li.page-item {
+	display: inline;
+	padding-right: 15px;
+  }
+  svg.permalink {
+	color: #666;
+	fill: currentColor;
+  }
+  svg:hover.permalink {
+	color: #f00;
+	fill: currentColor;
+  }
+  .title {
+	padding: 0;
+	margin: 20px 0;
+  }
+  .content {
+	padding: 0;
+	margin: 20px 0;
+  }
+  .title h1,
+  .title h2 {
+	padding: 0;
+  }
+  .meta div {
+	padding: 0;
+  }
+  .content h1 {
+	padding: 0;
+	margin: 25px 0 0;
+  }
+  .content h2 {
+	padding: 0;
+	margin: 20px 0 0;
+  }
+  .content h3 {
+	padding: 0;
+	margin: 20px 0 0;
+  }
+  .content h4 {
+	padding: 0;
+	margin: 15px 0 0;
+  }
+  .content h5 {
+	padding: 0;
+	margin: 10px 0 0;
+  }
+  .content h6 {
+	padding: 0;
+	margin: 10px 0 0;
+  }
+  .content p {
+	padding: 0;
+	margin: 10px 0;
+  }
