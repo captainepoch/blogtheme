@@ -1,13 +1,12 @@
 <!-- Shortcode taken from
-https://gitlab.com/kaushalmodi/hugo-theme-refined/-/blob/5f46051d2c649bc42077fe707f485272c4dc150f/layouts/shortcodes/figure.html
+https://gitlab.com/kaushalmodi/hugo-theme-refined/-/blob/476ab76fe5246223226c5a7789120d018ea3932f/layouts/shortcodes/figure.html
 under MIT license.
 -->
-
 <!-- https://github.com/gohugoio/hugo/issues/4406 -->
 <!-- https://github.com/gohugoio/hugo/issues/4562 -->
 {{ $image := .Get "src" }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-    {{ if .Get "link"}}<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>{{ end }}
+    {{ if (.Get "link") }}<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>{{ end }}
         {{ if (findRE "(^|:)//" $image) -}} <!-- If image link is a URL with protocol or two leading slashes, use just that unmodified. -->
             <img src="{{ $image }}"
         {{- else if (findRE "^/" $image) -}} <!-- If image link has one leading slash -->
@@ -20,24 +19,24 @@ under MIT license.
             <img src="{{ (printf "%s%s" $permalink_pretty $image) }}"
         {{- end -}}
             {{- if (or (.Get "alt") (.Get "caption")) -}}
-                {{- with .Get "alt"}}
+                {{- with (.Get "alt")}}
                     {{- printf " alt=\"%s\"" . | safeHTMLAttr -}}
                 {{- else -}}
-                    {{- printf " alt=\"%s\"" (.Get "caption" | markdownify | plainify) | safeHTMLAttr -}}
+                    {{- printf " alt=\"%s\"" (.Get "caption" | $.Page.RenderString | plainify) | safeHTMLAttr -}}
                 {{- end -}}
             {{- end -}}
+            {{ with (.Get "title") }}
+                {{- printf " title=\"%s\"" . | safeHTMLAttr -}}
+            {{ end }}
             {{- with .Get "width" }} width="{{ . }}"{{ end -}}
             {{- with .Get "height" }} height="{{ . }}"{{ end -}}/> <!-- Closing img tag -->
-        {{- if .Get "link" }}</a>{{ end -}}
+        {{- if (.Get "link") }}</a>{{ end -}}
         {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
             <figcaption>
-                {{ with (.Get "title") }}
-                    <h4>{{ . }}</h4>
-                {{ end }}
                 {{ if (or (.Get "caption") (.Get "attr")) }}<p>
-                    {{ .Get "caption" | markdownify | emojify }}
+                    {{ .Get "caption" | $.Page.RenderString | emojify }}
                     {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
-                        {{ .Get "attr" | markdownify }}
+                        {{ .Get "attr" | $.Page.RenderString }}
                         {{ if .Get "attrlink" }}</a>{{ end }}</p>
                 {{ end }}
             </figcaption>
