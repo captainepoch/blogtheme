@@ -5,6 +5,9 @@ The theme that generates my website. 100% free of JavaScript. It's based on
 
 You can look at the theme at [adol.pw][adolpw].
 
+# Requirements
+This theme requires Hugo 0.141.0 extended version as minimum.
+
 # License
 
 [MIT][license].
